@@ -33,20 +33,6 @@ function Banner() {
         </div>
         <div className='featured-post border-corner-bl'>
           <img src='images/section/47.jpg' alt='images' />
-          <div
-            className='site-list has-border text-center animate-element wow delay5 fadeInUp'
-            data-wow-delay='0.3s'
-          >
-            <Link to='#' className='bg-s1'>
-              <i className='fa fa-twitter' aria-hidden='true' />
-            </Link>
-            <Link to='#' className='bg-s2'>
-              <i className='fa fa-behance' aria-hidden='true' />
-            </Link>
-            <Link to='#' className='bg-s3'>
-              <span className='icon-dribble' />
-            </Link>
-          </div>
         </div>
       </div>
       <div
