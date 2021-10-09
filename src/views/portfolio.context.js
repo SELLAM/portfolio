@@ -4,7 +4,7 @@ const PortfolioContext = React.createContext()
 
 export const usePortfolio = () => useContext(PortfolioContext)
 
-export const PortfolioProvider = ({ children }) => {
+export const PortfolioProvider = ({ children, isKhalid }) => {
   const [about, setAbout] = useState({})
   const [educations, setEducations] = useState([])
   const [works, setWorks] = useState([])
@@ -17,7 +17,8 @@ export const PortfolioProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    fetch("https://gitconnected.com/v1/portfolio/sellamabderrahmane")
+    const url = isKhalid ? 'https://gitconnected.com/v1/portfolio/zennoukhalid' : 'https://gitconnected.com/v1/portfolio/sellamabderrahmane';
+    fetch(url)
       .then((res) => res.json())
       .then((rep) => {
         const { basics, education, skills, work, projects, references} = rep
@@ -29,7 +30,7 @@ export const PortfolioProvider = ({ children }) => {
         setReferences(references)
       })
       .catch((error) => console.log(error))
-  }, [])
+  }, [isKhalid])
 
   const state = {
     works,
@@ -38,7 +39,8 @@ export const PortfolioProvider = ({ children }) => {
     educations,
     projects,
     references,
-    openLink
+    openLink,
+    isKhalid
   }
 
   return <PortfolioContext.Provider value={state}>{children}</PortfolioContext.Provider>

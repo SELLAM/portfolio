@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { usePortfolio } from "../views/portfolio.context"
 
 function Header({ menus = [] }) {
-  const { references, openLink } = usePortfolio()
+  const { references, openLink , isKhalid} = usePortfolio()
   return (
     <header id='header' className='header header-style4 has-menu-model'>
       <div className='container'>
@@ -16,7 +16,8 @@ function Header({ menus = [] }) {
               }}
               title='Logo'
             >
-              <img src='images/logo/logo.png' alt='images' width={122} height={34} />
+              {!isKhalid && <img src='images/logo/logo.png' alt='images' width={122} height={34} />}
+              {isKhalid && <img src='images/logo/khalid.png' alt='images' width={122} height={34} />}
             </Link>
           </div>
           <div dir='rtl' className='btn-menu mobile-header__menu-button'>
