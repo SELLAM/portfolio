@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
@@ -14,11 +14,11 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename='portfolio'>
+        <HashRouter basename='portfolio'>
             <PortfolioProvider>
                 <App />
             </PortfolioProvider>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>
 )
 
