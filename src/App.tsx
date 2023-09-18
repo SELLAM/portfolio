@@ -21,7 +21,7 @@ export const App: React.FC<any> = () => {
 
     return (
         <Routes key={location.pathname} location={location}>
-            <Route path='*' Component={Layout}>
+            <Route path='/*' Component={Layout}>
                 <Route path='about' Component={AboutMe} />
                 <Route path='contact' Component={Contact} />
                 <Route path='resume' Component={Resume} />

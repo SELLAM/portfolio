@@ -1,6 +1,7 @@
 {
     "short_name": "Abderrahmane",
     "name": "portfolio",
+    "id": "/portfolio/",
     "scope": "/portfolio/",
     "start_url": "/portfolio/",
     "display": "standalone",
