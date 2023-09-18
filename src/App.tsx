@@ -11,7 +11,7 @@ export const App: React.FC<any> = () => {
     if (loading) {
         return (
             <img
-                src={process.env.PUBLIC_URL + '/logo.png'}
+                src={process.env.PUBLIC_URL + '/images/logo.png'}
                 className='rounded-circle position-absolute top-50 start-50 translate-middle'
                 loading='lazy'
                 width='10%'

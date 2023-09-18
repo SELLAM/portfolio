@@ -8,7 +8,7 @@ export const Education: React.FC<any> = ({ educations }) => {
                 <h4 className='section-title'>Education</h4>
             </div>
             {educations.map((educt, i) => (
-                <div className={'exp-card-item mb-2 ' + (i % 2 ? 'bg-prink' : 'bg-catkrill')}>
+                <div key={i} className={'exp-card-item mb-2 ' + (i % 2 ? 'bg-prink' : 'bg-catkrill')}>
                     <span className='card-subtitle'>
                         {educt.start.year}-{educt.end.year}
                     </span>

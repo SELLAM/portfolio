@@ -14,7 +14,7 @@ export const Skills: React.FC<any> = ({ skills }) => {
             </div>
             <div className='kill-bar-wrapper'>
                 {skills.map((skill, i) => (
-                    <div className='skill-bar-item mb-4'>
+                    <div className='skill-bar-item mb-4' key={i}>
                         <div className='title-wrap'>
                             <h5 className='title'>{skill.name}</h5>
                             <span className='count'>{SKILL_PER[skill.level]}</span>

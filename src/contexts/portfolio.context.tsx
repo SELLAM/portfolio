@@ -18,8 +18,6 @@ export const PortfolioProvider: React.FC<any> = ({ children }) => {
         fetch(url)
             .then((res) => res.json())
             .then((rep) => {
-                console.log(rep)
-
                 const { basics, languages, education, skills, work, projects, references } = rep
                 setPortfolio({
                     skills,
