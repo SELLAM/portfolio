@@ -7,7 +7,7 @@ export const Projects: React.FC<any> = ({ projects }) => {
         <div className='projects'>
             <div className='row g-3'>
                 {projects.map((project, i) => (
-                    <div className='col-xl-6 col-lg-12'>
+                    <div key={i} className='col-xl-6 col-lg-12'>
                         <div className='work-card'>
                             <a className='img' href={project.website || project.githubUrl} target='_blank'>
                                 <img

@@ -16,7 +16,15 @@ export const About: React.FC<any> = ({ summary }) => {
                     <div className='col-xxl-6 col-xl-6 col-lg-6'>
                         <div className='what-do-item bg-catkrill'>
                             <div className='icon'>
-                                <img alt='feature' loading='lazy' width='130' height='40' decoding='async' data-nimg='1' src='/webdev.svg' />
+                                <img
+                                    alt='feature'
+                                    loading='lazy'
+                                    width='130'
+                                    height='40'
+                                    decoding='async'
+                                    data-nimg='1'
+                                    src={process.env.PUBLIC_URL + '/images/webdev.svg'}
+                                />
                             </div>
                             <div className='text'>
                                 <h4 className='title'>Web Development</h4>
@@ -33,7 +41,15 @@ export const About: React.FC<any> = ({ summary }) => {
                     <div className='col-xxl-6 col-xl-6 col-lg-6'>
                         <div className='what-do-item bg-prink'>
                             <div className='icon'>
-                                <img alt='feature' loading='lazy' width='130' height='40' decoding='async' data-nimg='1' src='/app-development.svg' />
+                                <img
+                                    alt='feature'
+                                    loading='lazy'
+                                    width='130'
+                                    height='40'
+                                    decoding='async'
+                                    data-nimg='1'
+                                    src={process.env.PUBLIC_URL + '/images/app-development.svg'}
+                                />
                             </div>
                             <div className='text'>
                                 <h4 className='title'>App Development</h4>

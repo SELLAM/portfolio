@@ -11,14 +11,14 @@ export const Layout: React.FC<any> = () => {
         <div className='layout-wrapper'>
             <div className='layout container'>
                 <div className='top-header'>
-                    <img src='/logo.png' loading='lazy' />
+                    <img src={process.env.PUBLIC_URL + '/images/logo.png'} loading='lazy' />
                 </div>
                 <div className='info'>
                     <Info />
                 </div>
                 <div className='content-wrapper'>
                     <Outlet />
-                    <Footer /> 
+                    <Footer />
                 </div>
                 <Header />
             </div>

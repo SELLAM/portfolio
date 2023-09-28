@@ -20,8 +20,8 @@ export const Info: React.FC<any> = () => {
         () =>
             profiles
                 .filter((p) => p.network !== 'gitconnected')
-                .map((profile) => (
-                    <li>
+                .map((profile, key) => (
+                    <li key={key}>
                         <a target='_blank' href={profile.url} className={profile.network.toLowerCase()}>
                             <i className={'bi bi-' + profile.network.toLowerCase()}></i>
                         </a>
@@ -92,7 +92,7 @@ export const Info: React.FC<any> = () => {
 
             <div className='info-lang mb-5'>
                 {languages.map((lang: any, i: number) => (
-                    <div className='skill-bar-item mb-4'>
+                    <div key={i} className='skill-bar-item mb-4'>
                         <div className='title-wrap'>
                             <h5 className='title'>{lang.language}</h5>
                             <span className='count'>{LANG_PER[lang.fluency]}</span>
