@@ -14,7 +14,7 @@ export const PortfolioProvider: React.FC<any> = ({ children }) => {
 
     React.useEffect(() => {
         setLoading(true)
-        const url = 'https://gitconnected.com/v1/portfolio/sellamabderrahmane'
+        const url = 'https://gitconnected.com/v1/portfolio/sellam'
         fetch(url)
             .then((res) => res.json())
             .then((rep) => {
